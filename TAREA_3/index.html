@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas Semánticas y de formateo de texto 2</title>
+    <meta name="author" content="Kevin Arenas">
+</head>
+<body>
+    <h2>Cómo citar con semántica en HTML</h2>
+    <!-- Citas cortas -->
+    <p>Como dijo un sabio: "Yo solo se que no se nada" -Sabio</p>
+    <p>Como dijo un sabio: <q>Yo solo se que no se nada</q> -Sabio</p>
+
+    <!-- Citas largas -->
+    <p>Como dijo un sabio:</p>
+    <blockquote>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+    </blockquote>
+    <p> Y otro dijo:</p>
+    <blockquote>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+    </blockquote>
+
+    <hr>
+
+    <h2>Saltos de línea y Reglas horizontales</h2>
+    <p>Este es el primer parrafo <br><br>Este es el segundo parrafo<br>Este es el tercer parrafo</p>
+
+    <hr>
+
+    <h2>Visualización y Formato de Código</h2>
+    <p>Cuando nosotros implementamos <code>print("Hola, Mundo")</code> en Python, la salida en consola será: Hola, Mundo</p>
+    <h3>Visualización de Código en varias líneas</h3>
+    <p>Este Programa suma 2 números en Python</p>
+    <pre>
+        #Suma de 2 números
+        a = 5
+        b = 6
+        print(a + b)
+    </pre>
+    <p>Este código imprime un hola mundo en HTML</p>
+    <!-- Para escribir caracteres como <> se utilizan las entidades HTML, que permiten avisar al navegador que vamos a utilizar un símbolo special -->
+    <pre>
+        &lt;body&gt;
+            &lt;h1&gt;Hola, Mundo&lt;/h1&gt;
+        &lt;/body&gt;   
+    </pre>
+
+    <hr>
+    <p>Para representar la entrada del teclado (teclas) se utiliza la etiqueta <code>&lt;kbd&gt;&lt;/kbd&gt;</code></p>
+    <p>Para copiar el texto de un archivo, utilizamos la combinación de teclas <kbd>CTRL + C</kbd></p>
+</body>
+</html>
