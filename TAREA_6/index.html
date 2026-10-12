@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name"author" content="Kevin Arenas">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listas y Formularios</h1>
+    <div>
+        <h2>Listas</h2>
+        <h3>Lista no ordenada</h3>
+        <ul type="square">
+            <li>Leche</li>
+            <li>Pan</li>
+            <li>huevos</li>
+            <li>Queso</li>
+        </ul>
+
+        <hr>
+
+        <h3>Lista ordenada</h3>
+        <ol type="I" start="7" reversed> <!-- type="I" para numeros romanos, start="7" para iniciar en 7, reversed para invertir el orden -->
+            <li>Leche</li>
+            <li>Pan</li>
+            <li>huevos</li>
+            <li>Queso</li>
+        </ol>
+    </div>
+    
+    <hr>
+
+    <div>
+        <h3>Listas de definición</h3>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Lenguaje de marcado de hipertexto</dd>
+            <dt>CSS</dt>
+            <dd>Hoja de estilo en cascada</dd>
+            <dt>JS</dt>
+            <dd>Lenguaje de programación</dd>
+        </dl>
+    </div>
+
+    <hr>
+
+    <div>
+        <h3>Listas anidadas</h3>
+        <ul>
+            <li>Front-end
+                <ol type="a">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JS</li>
+                </ol>
+            </li>
+            <li>Back-end
+                <ol type="i" style="list-style: none;">
+                    <li>Node JS</li>
+                    <li>MySQL</li>
+                    <li>ArchLinux</li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    
+    <hr>
+
+    <div>
+        <h3>Formularios</h3>
+        <form method="POST"> <!-- method="POST" para enviar los datos del formulario al servidor -->
+            <label action="" for="nombre">Nombre:</label> <!-- for="nombre" para asociar el label con el input -->
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre" required><!-- placeholder="Escribe tu nombre" para mostrar un texto dentro del input -->
+            <br><br>
+            <label for="correo">Correo:</label>
+            <input type="email" name="correo" id="correo" placeholder="Escribe tu correo" required><!--name="correo" para asociar el input con el label -->
+            <br><br>
+            <label for="Contrasena"></label>
+            <fieldset>
+                <legend>Contraseña</legend>
+                <input type="password" name="Contrasena" id="Contrasena" placeholder="Escribe tu contraseña" required>
+            </fieldset>
+            <br><br>
+            <input type="submit" value="Enviar" style="display: block; margin: 0 auto;">
+        </form>
+    </div>
+
+    <hr>
+
+        <h3>Formulario de campo de entrada de varias lineas</h3> 
+        <form action="validar.js" method="post">  
+            <label for="name">Nombre</label>
+            <input placeholder="Ingresa tu nombre" type="text" id="name" name="name" required>
+
+            <br><br>
+        
+            <label for="opinion">Comentario</label>
+            <textarea id="opinion" name="opinion" placeholder="Tu opinión es importante" required rows="5" cols="40"></textarea>
+
+            <br><br>
+            <button type="submit" style="display: block; margin: 0 auto;">Enviar comentario</button>
+        </form>
+
+        <hr>
+
+        <h3>Formulario con una lista desplegable de opciones</h3>
+        <form action="/opciones" method="post">
+            <label for="bebidas">Bebidas </label>
+            <select name="bebidas" id="bebidas">
+                <option value="coca-cola">Coca-Cola</option>
+                <option value="pepsi">Pepsi</option>
+                <option value="boing">boing</option>
+                <option value="té">Té</option>
+                <option value="jarrito" selected="selected">Jarrito</option>
+            </select>
+
+            <br><br>
+            <label for="postres">Postres </label>
+            <select name="postres" id="postres">
+                <option value="" disabled selected>Selecciona un postre</option>
+                <option value="pay de limon">Pay de Limón</option>
+                <option value="pay de fresa">Pay de Fresa</option>
+                <option value="flan">Flan</option>
+                <option value="gelatina">Gelatina</option>
+                <option value="pastel">Pastel</option>
+            </select>
+            <br><br>
+            <input type="submit" style="display: block; margin: 0 auto;">
+        </form>
+
+        <hr>
+
+        <h3>Formulario con distintos campos de datos</h3>
+        <form action="datos.php" method="post">
+            <fieldset>
+                <legend>
+                    Nombre Completo
+                </legend>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br><br>
+                <label for="ap_Paterno">Ap. Paterno</label>
+                <input type="text" id="ap_Paterno" name="ap_Paterno" required>
+                <br><br>
+                <label for="ap_Materno">Ap. Materno</label>
+                <input type="text" id="ap_Materno" name="ap_Materno" required>
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Otros datos
+                </legend>
+                <label for="Fecha de nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="Fecha de nacimiento" name="Fecha de nacimiento" required>
+                <br><br>
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" name="edad" required min="18" max="90">
+                <br><br>
+                <label for="numero_cuenta">Número de cuenta </label>
+                <input type="text" id="numero_cuenta" name="numero_cuenta" required pattern="[0-9]{9}" minlength="9" maxlength="9">
+                <br><br>
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Datos de Ubicación</legend>
+                <label for="calle">Calle</label>
+                <input type="text" id="calle" name="calle" placeholder="Ingresa la calle" required>
+                <br><br>
+                <label for="numero">Número</label>
+                <input type="number" id="numero" name="numero" placeholder="Ingresa el número" required>
+                <br><br>
+                <label for="colonia">Colonia</label>
+                <input type="text" id="colonia" name="colonia" placeholder="Ingresa la colonia" required>
+                </fieldset>
+            <button type="submit" style="display: block; margin: 0 auto;">Enviar</button>
+        </form>
+        
+    </div>
+</body>
+</html>
