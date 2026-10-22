@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kevin Arenas">
+    <title>Resumen HTML</title>
+</head>
+<body>
+    <header>
+        <section>
+            <img src="./imagenes/Cereal.png" alt="Cereal" width="100" height="100">
+        </section>
+
+        <nav>
+            <ul>
+                <li><a href="./TAREA_1/">Inicio</a></li>
+                <li><a href="../TAREA_4/index.html">Resumen</a></li>
+                <li><a href="./TAREA_7/index.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Resumen HTML: Principales conceptos y etiquetas</h2>
+        <p>Esta pagina va a resumir los principales conceptos y etiquetas vistas en la clase de programación web</p>
+    </section>
+    <main>
+        <section>
+            <h2>Conceptos principales HTML</h2>
+            <article>
+                <h3>HTML</h3>
+                <p>HTML (HyperText Markup Language) es el lenguaje de marcado de hipertexto estándar. ES un lenguaje de marcado que se utiliza para estructurar páginas web.</p>
+            </article>
+            <article>
+                <h3>Elemento HTML</h3>
+                <p>Un elemento HTML Es la unidad basica de estructura y contenido en una pagina web.</p>
+                <ol>
+                    <li>Etiqueta de apertura</li>
+                    <li>Pares Atributos-valor</li>
+                    <li>Contenido del elemento</li>
+                    <li>Etiqueta de cierre</li>
+                </ol>
+            </article>
+            <article>
+                <h3 >Etiqueta &lt;head&gt;</h3>
+                <p>La etiqueta head es un elemento HTML que se utiliza para comunicarse con el navegador atraves de los metadatos, permite mejorar, el SEO, ademas se enlaza archivos externos de estilos o scripts.</p>
+            </article>
+            <article>
+                <h3>Etiqueta &lt;body&gt;</h3>
+                <p>La etiqueta body es un elemento HTML que contiene todo el contenido que ve el usuario  en nuestra pagina web.</p>
+            </article>
+            <article>
+                <h3>Contenedores Semanticos</h3>
+                <table border="1px">
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Descripción</th>
+                    </tr>
+                    <tr>
+                        <th>&lt;header&gt;</th>
+                        <td>Etiqueta utilizada para el contenido introductorio de una pagina web, puede tener el logo, el menu de navegación, el nombre de la empresa, etc.</td>
+                    </tr>
+                    <tr>
+                        <th>&lt;nav&gt;</th>
+                        <td>suele contener enlaces adicionales a otras paginas o navegar por la pagina principal.</td>
+                    </tr>
+                    <tr>
+                        <th>&lt;main&gt;</th>
+                        <td>Etiqueta unica de una pagina web cuyo proposito es resaltar nuestro objetivo o mensaje pSrincipal del sitio web,, dentro se colocara el contenido principal de nuestra pagina.</td>
+                    </tr>
+                    <tr>
+                        <th>&lt;section&gt;</th>
+                        <td>Es una etiqueta que poco a poco se intenta que sutituya a &lt;diiv&gt;, su uso es para dividir a una pagina web en secciones y agrupar contenido relacionado.</td>
+                    </tr>
+                    <tr>
+                        <th>&lt;article&gt;</th>
+                        <td>Etiqueta que se utiliza para agrupar contenido autonomo, que si se separa de otro contenido, sigue teniendo coherencia, normalmente se compone de un encabezado y contenido.</td>
+                    </tr>
+                    <tr>
+                        <th>&lt;footer&gt;</th>
+                        <td>Etiqueteta que normalmente se encuentra al final de la pagina y funciona como cierre del sitio web, a menudo tiene datos de contacto, derechos de autor, u otra informacion.</td>
+                    </tr>
+                    <tr>
+                        <th>&lt;aside&gt;</th>
+                        <td>Representa contenido secundario que no está directamente relacionado con el contenido principal.</td>
+                    </tr>
+                    <tr>
+                        <th>&lt;aside&gt;</th>
+                        <td>Representa una seccion cuyo contenido no esta relacionado con el contenido principal del documento como barras laterales, publicidad, enlaces a otros articulos relacionados etc.
+                        </td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <section>
+            <h2>Elementos principales de HTML</h2>
+            <article>
+                <h3>Elemento &lt;a&gt;</h3>
+                <p>Este elemento contiene enlaces a otra pagina</p>
+                <ul>
+                    <li>Externos</li>
+                    <li>Internos</li>
+                    <li>Anclaje</li>
+                </ul>
+                <p>algunos valores especiales que tiene en su atributo href son:</p>
+                <dl>
+                    <dt>href = "https://wa.me/2821825617"</dt>
+                    <dd>Este valor envia un whatsapp a un numero especifico</dd>
+                    <dt>href = "mailto:example@example.com"</dt>
+                    <dd>Este valor abre el cliente de correo predeterminado del usuario para enviar un correo electrónico a la dirección especificada.</dd>
+                </dl>
+            </article>
+            <article>
+                <h3>Elemento &lt;form&gt;</h3>
+                <p>Es la manera en que los usuarios se pueden comunicar con una pagina web, gracias a esto se pueden procesar datos enviados por el usuario, segun el objetivo de nuestra pagina web</p>
+                <p>Por ejemplo este es un formulario tipico de inicio de sesion:</p>
+                <form action="hola.js" method="post">
+                    <label for="username">Nombre de usuario:</label>
+                    <input type="text" id="username" name="username">
+                    <br>
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password">
+                    <input type="submit" value="Iniciar sesión">
+                </form>
+            </article>
+        </section>
+    </main>
+
+</body>
+</html>
