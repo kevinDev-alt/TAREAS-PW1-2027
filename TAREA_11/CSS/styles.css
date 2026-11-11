@@ -10,6 +10,39 @@ body{
     /*El relleno/padding: espacio entre el contenido del elemento y su borde
     Se aplican los valores en sentido horario: top, right, bottom, left
     1valor: t,r,b,l 2valores: t/b, r/l 3valores: t, r/l, b*/
-    border: 4px solid #f03;
     padding: 50px 0px 0px 40px;
+    
+    /*El margen/margin: espacio entre un elemento HTML y el resto de los elementos HTML a su alrededor*/
+    margin: 0px 30px 50px 0px;
+
+    /*El borde/border: Es el contorno visual al rededor de nuestro elemento HTML (dentro de el podemos encontrar el contenido del elemento y su relleno*/
+    border: 4px solid #f03;
+    border-radius: 10px;
+    border-bottom-color: 2px;
+
+    /*box-shadow: sombra alrededor del elemento, se debe especificar los valores: desplazamiento-horizontal esplazamiento-vertical radio-desenfoque*/
+    box-shadow: 10px 10px 5px 0px #000;
+}
+.introduccion{
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #f03;
+}
+
+.introduccion p{
+    width: 50%;/*El ancho del elemento HTML, se puede especificar en porcentaje o en pixeles*/
+    height: 50%;/*La altura del elemento HTML, se puede especificar en porcentaje o en pixeles*/
+    border: 2px dotted #f03;
+    /* margin: 10px auto;*/
+}
+
+.introduccion span{
+    width: 50%;/*El ancho del elemento HTML, se puede especificar en porcentaje o en pixeles*/
+    height: 50px;/*La altura del elemento HTML, se puede especificar en porcentaje o en pixeles*/
+    border: 2px dotted #f03;
+
+    padding: 10px 20px 30px 40px;
+    margin: 10px 20px 30px 40px;
+
+    /*display: inline-block;*/
 }
