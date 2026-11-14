@@ -1,0 +1,88 @@
+html{
+    font-size: 10px;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+}
+
+/*Despues del body se deben de poner estos estilos*/
+a:link{/*actua cuando se visita por primera vez */
+    color: #FAC;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+a:visited{/*actua cuando se visita por segunda vez */
+    color: #F3C;
+    text-decoration: line-through;
+}
+
+a:focus{/*actua cuando se hace click en el enlace */
+    background-color: #F3CC;
+    color:#fff;
+    border: 2px solid #90CC;
+    text-decoration: none;
+}
+
+a:hover{/*actua cuando se pasa el mouse por encima */
+    color: #ccc;
+    text-decoration: none;
+}
+
+a:active{/*actua cuando se hace click en el enlace */
+    font-family: "Impact";
+    color: #FFF;
+    text-decoration: none;
+}
+
+#encabezado{
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 2em; /*20px*/
+}
+
+#encabezado h1{
+    text-shadow: 1px 1px 2px #90C;
+    color: #333;
+    font-size: 36px;
+    margin: 20px 0;
+    font-size: 2em
+}
+
+#encabezado p{
+    font-size: 2em;
+}
+
+.contenedor-enlaces{
+    border: 2px solid #90C;
+    background-color: #000;
+    color: #fff;
+}
+
+.enlaces h2{
+    text-shadow: 2px 2px 2px #F3C;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.enlaces p{
+    text-align: center;
+    padding:7px;
+}
+
+.enlaces ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /*none, disc, decimal square, lower-alpha, lower-roman lower-latin lower-greek al igual que en upper*/
+}
+.enlaces ul li{
+    border: 0.2rem solid #A2D;
+    margin: 0.8rem;
+    padding: 5px;
+    list-style-type:lower-greek;/*disc, decimal square, lower-alpha, lower-roman lower-latin lower-greek al igual que en upper*/
+    list-style-position: inside;/*outside, inside*/
+}
