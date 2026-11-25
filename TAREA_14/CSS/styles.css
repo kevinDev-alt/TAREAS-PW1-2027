@@ -8,6 +8,10 @@ body{
 #encabezado{
     font-size: 25px;
     border: 0.2rem solid pink;
+    position: sticky;
+    width: 100%;
+    z-index: 6;
+    top: 0;
 }
 .logo{
     border: 0.2rem solid #6f6f6f;
@@ -24,17 +28,34 @@ body{
 #encabezado h1{
     text-align: center;
     text-shadow: 0.2rem solid #63a;
+    position: sticky; /*Saca del flujo*/
+    top: 0rem;
+    right: 35%;
+    z-index: 5;
 }
 
 #navegacion ul{
     list-style-type: none;
     padding-left: 0;
+    width: 20%;
+    height: 40rem;
+    margin: 0.5rem;
+    position: absolute; /*Saca del flujo*/
+    top: 7rem;
+    right: 0rem;
+    font-size: 3rem;
 }
+
+#navegacion ul li{
+    display: inline-block;
+}
+
 #elementos-posicionados {
     border: 0.2rem solid #f0a;
     padding: 1rem;
-    position: relative; /* Sirve de referencia para los hijos absolutos */
-    min-height: 36rem; /* Ajusta este valor según el tamaño de tus imágenes */
+    position: relative; 
+    min-height: 500rem; 
+    top: 30.64rem;
 }
 .Gato{
     border: 0.2rem solid #63a;
@@ -43,7 +64,6 @@ body{
     margin: 0.5rem;
     position: absolute;/*mete al flujo*/
     z-index: 3; /*Se pone encima de el otro por el numero, entre mayor sea, le toma mas importancia*/
-    left: 0rem;
     top: 0rem;
 }
 .MAXII{
@@ -63,7 +83,7 @@ body{
     margin: 0.5rem;
     position: absolute;
     bottom: 0;
-    right: 0;
+    left: 0rem;
     z-index: 3;
 }
 .JB{
@@ -72,9 +92,31 @@ body{
     height: 40rem;
     margin: 0.5rem;
     bottom: 0;
-    right: 0;
     position: absolute;
     bottom: 0;
     right: 0;
     z-index: 4;
+}
+
+/*CONSULTAS DE MEDIOS (MEDIAS QUERIES)
+Sirve para definir los estilos a elementos HTML, segun el tamaño de la pantalla de nuestro dispositivo, gracias a esto se proporciona una herramienta que nos sirve para la creacion de paginas web responsivas o adaptables.
+Si se definen varias consultas de medios, se deben poner en forma descendente segun la media del dispositivo.
+Moviles (<480px), Tablets(480px-960px), PC(960px-1280px)*/
+@media screen and (max-width: 1250px) {
+    #encabezado h1{
+        left: 29%;
+        font-size: 3rem;
+    }
+    .logo{
+        height: 27rem;
+    }
+}
+@media screen and (max-width: 817px) {
+    #encabezado h1{
+        left: 29%;
+        font-size: 3rem;
+    }
+    .logo{
+        height: 27rem;
+    }
 }
