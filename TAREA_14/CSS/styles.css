@@ -2,6 +2,7 @@ html{
     font-size: 10px;
 }
 body{
+    font-family: Verdana, Courier, monospace;
     padding: 0px;
     margin: 0px;
 }
@@ -9,7 +10,6 @@ body{
     font-size: 25px;
     border: 0.2rem solid pink;
     position: sticky;
-    width: 100%;
     z-index: 6;
     top: 0;
 }
@@ -20,7 +20,7 @@ body{
     border-radius: 65%;
 }
 .logo img{
-    border: 0.2rem solid ;
+    border: 0.2rem solid #000;
     width: 100%;
     height: 100%;
     border-radius: 65%;
@@ -28,7 +28,7 @@ body{
 #encabezado h1{
     text-align: center;
     text-shadow: 0.2rem solid #63a;
-    position: sticky; /*Saca del flujo*/
+    position: absolute; /*Saca del flujo*/
     top: 0rem;
     right: 35%;
     z-index: 5;
@@ -38,11 +38,10 @@ body{
     list-style-type: none;
     padding-left: 0;
     width: 20%;
-    height: 40rem;
     margin: 0.5rem;
     position: absolute; /*Saca del flujo*/
-    top: 7rem;
-    right: 0rem;
+    top: 25%;
+    right: 10%;
     font-size: 3rem;
 }
 
@@ -86,6 +85,10 @@ body{
     left: 0rem;
     z-index: 3;
 }
+.persona img{
+    width: 100%;
+    height: 100%;
+}
 .JB{
     border: 0.2rem solid #63a;
     width: 45rem;
@@ -97,26 +100,70 @@ body{
     right: 0;
     z-index: 4;
 }
+.JB img{
+    width: 100%;
+    height: 100%;
+}
 
 /*CONSULTAS DE MEDIOS (MEDIAS QUERIES)
 Sirve para definir los estilos a elementos HTML, segun el tamaño de la pantalla de nuestro dispositivo, gracias a esto se proporciona una herramienta que nos sirve para la creacion de paginas web responsivas o adaptables.
 Si se definen varias consultas de medios, se deben poner en forma descendente segun la media del dispositivo.
 Moviles (<480px), Tablets(480px-960px), PC(960px-1280px)*/
-@media screen and (max-width: 1250px) {
-    #encabezado h1{
-        left: 29%;
-        font-size: 3rem;
+/* Tablets y pantallas medianas (hasta 817px) */
+@media screen and (max-width: 817px) {
+    #encabezado h1 {
+        left: 32%;
+        font-size: 2.2rem;
     }
-    .logo{
-        height: 27rem;
+
+    .logo {
+        height: 15rem; /* Reducimos el tamaño para que no aplaste el título */
     }
 }
-@media screen and (max-width: 817px) {
-    #encabezado h1{
-        left: 29%;
-        font-size: 3rem;
+
+/*Teléfonos móviles (hasta 480px)*/
+@media screen and (max-width: 480px) {
+    #encabezado {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding: 1rem;
     }
-    .logo{
-        height: 27rem;
+
+    .logo {
+        position: static; /* Quita el posicionamiento absoluto/flotante*/
+        height: 10rem;
+        width: auto;
+        margin-bottom: 0.5rem;
+    }
+
+    #encabezado h1 {
+        position: static; /*Centra el título debajo del logo*/
+        font-size: 1.4rem;
+        text-align: left;
+        width: 45%;
+    }
+
+    /*Apila las cajas de imágenes una debajo de otra en teléfono*/
+    #elementos-posicionados {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    #elementos-posicionados > section {
+        width: 85%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Restaura las imágenes de las esquinas al flujo normal */
+    .Gato, .MAXII, .persona, .JB {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin: 0;
     }
 }
