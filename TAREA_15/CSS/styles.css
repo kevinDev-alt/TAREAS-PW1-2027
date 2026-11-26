@@ -1,0 +1,194 @@
+html{
+    font-size: 10px;
+}
+body{
+    font-family: Verdana, Courier, monospace;
+    padding: 0px;
+    margin: 0px;
+}
+#encabezado{
+    font-size: 25px;
+    border: 0.2rem solid pink;
+    position: sticky;
+    z-index: 6;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    border: 0.2rem solid #6f6f6f;
+    width: 21%;
+    height: 23rem;
+    border-radius: 65%;
+}
+.logo img{
+    border: 0.2rem solid #000;
+    width: 100%;
+    height: 100%;
+    border-radius: 65%;
+}
+#encabezado h1{
+    text-align: center;
+    text-shadow: 0.2rem solid #63a;
+    top: 0rem;
+    right: 35%;
+}
+
+#navegacion ul{
+    list-style-type: none;
+    padding-left: 0;
+    width: 25%;
+    margin: 0.5rem;
+    top: 25%;
+    right: 10%;
+    font-size: 3rem;
+    display: flex;
+    gap: 1rem;
+}
+
+#navegacion ul li{
+    display: inline-block;
+}
+
+#contenedor-flexible {
+    border: 0.2rem solid #f0a;
+    padding: 1rem;
+    min-height: 500rem; 
+    /*display:flex vuelve a un contenedor flexible*/
+    display: flex;
+    /*flex-direction: define el eje principal o main axis en el que va atrabajar flexbox (row, column, row-reverse, columns-reverse*/
+    flex-direction: row;
+
+    /*justify-content: ; Permite distribuir el espacio de los objetos flexibles a lo largo del eje principal o main main*/
+    justify-content: space-evenly;
+
+    /*align-items: define el eje cruzado o cross-axis con el que va a trabajar flexbox*/
+    align-items: start;
+}
+.Gato{
+    border: 0.2rem solid #63a;
+    width: 25rem;
+    height: 25rem;
+    margin: 0.5rem;
+    z-index: 3; /*Se pone encima de el otro por el numero, entre mayor sea, le toma mas importancia*/
+    top: 0rem;
+}
+.MAXII{
+    border: 0.2rem solid #63a;
+    width: 25rem;
+    height: 25rem;
+    margin: 0.5rem;
+    top: 0rem;
+    right: 0rem;
+    z-index: 2;
+}
+.persona{
+    border: 0.2rem solid #63a;
+    width: 25rem;
+    height: 25rem;
+    margin: 0.5rem;
+    bottom: 0;
+    left: 0rem;
+    z-index: 3;
+}
+.persona img{
+    width: 100%;
+    height: 100%;
+}
+.JB{
+    border: 0.2rem solid #63a;
+    width: 30rem;
+    height: 25rem;
+    margin: 0.5rem;
+    bottom: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+}
+.JB img{
+    width: 100%;
+    height: 100%;
+}
+
+/*CONSULTAS DE MEDIOS (MEDIAS QUERIES)
+Sirve para definir los estilos a elementos HTML, segun el tamaño de la pantalla de nuestro dispositivo, gracias a esto se proporciona una herramienta que nos sirve para la creacion de paginas web responsivas o adaptables.
+Si se definen varias consultas de medios, se deben poner en forma descendente segun la media del dispositivo.
+Moviles (<480px), Tablets(480px-960px), PC(960px-1280px)*/
+/* Tablets y pantallas medianas (hasta 817px) */
+@media screen and (max-width: 817px) {
+    #encabezado h1 {
+        left: 32%;
+        font-size: 2.2rem;
+    }
+
+    .logo {
+        height: 15rem; /* Reducimos el tamaño para que no aplaste el título */
+    }
+}
+
+/*Teléfonos móviles (hasta 480px)*/
+@media screen and (max-width: 480px) {
+    #encabezado {
+        display: block;
+        text-align: center;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .logo, .apple {
+        position: static;
+        display: block;
+        height: 8rem;
+        width: auto;
+        margin: 0 auto 0.5rem auto; /* Centra el logo horizontalmente */
+    }
+
+    #encabezado h1 {
+        position: static;
+        font-size: 1.4rem;
+        text-align: left;
+        width: 45%;
+        margin: 0.5rem 0;
+    }
+
+    #navegacion {
+        position: static;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    #navegacion ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    #navegacion li {
+        display: inline-block; /*Coloca los links en fila horizontal sin flex*/
+        margin: 0 0.5rem;
+    }
+
+    /*Apila las secciones una debajo de otra usando bloques normales*/
+    #elementos-posicionados {
+        display: block;
+        height: auto;
+        min-height: auto;
+        padding: 1rem 0;
+    }
+
+    #elementos-posicionados > section {
+        display: block;
+        width: 85%;
+        margin: 0 auto 1.5rem auto; /*Centra cada caja y separa la siguiente abajo*/
+    }
+
+    /*Restaura las imágenes de las esquinas al flujo normal*/
+    .Gato, .MAXII, .persona, .JB {
+        position: static;
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+}
